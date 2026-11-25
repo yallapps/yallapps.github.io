@@ -1,0 +1,28 @@
+{
+  "app": "athkar360",
+  "name": "Athkar 360",
+  "channel": "beta",
+  "version": "1.0.0-rc3",
+  "versionCode": 1000003,
+  "minSupportedVersionCode": 0,
+  "published": "2026-11-25T22:57:16.050Z",
+  "releaseUrl": "https://github.com/yallapps/athkar360-releases/releases/tag/v1.0.0-rc3",
+  "assets": {
+    "arm64-v8a": {
+      "name": "athkar360-1.0.0-rc3-arm64-v8a.apk",
+      "url": "https://github.com/yallapps/athkar360-releases/releases/download/v1.0.0-rc3/athkar360-1.0.0-rc3-arm64-v8a.apk",
+      "sha256": "39eddf536edef3e20af3cf485879634fd9070d729e1544f908c0127a8d5a0380"
+    },
+    "armeabi-v7a": {
+      "name": "athkar360-1.0.0-rc3-armeabi-v7a.apk",
+      "url": "https://github.com/yallapps/athkar360-releases/releases/download/v1.0.0-rc3/athkar360-1.0.0-rc3-armeabi-v7a.apk",
+      "sha256": "462998352dff880f19102ba815dfeb340faebe7ef49fbf6103ea8f96c6a22582"
+    },
+    "universal": {
+      "name": "athkar360-1.0.0-rc3-universal.apk",
+      "url": "https://github.com/yallapps/athkar360-releases/releases/download/v1.0.0-rc3/athkar360-1.0.0-rc3-universal.apk",
+      "sha256": "54bdbcedf29df99695f6b482926f025a84d0781384f9a1c710412ec94fbaba8d"
+    }
+  },
+  "notes": "First public release.\n\n- Morning and evening adhkar, after prayer, before sleep, upon waking and while travelling.\n- Interactive counter and tasbih.\n- Favorites and offline search.\n- Local reminders.\n- Arabic, French and English interface.\n- Fully offline: no account, no analytics."
+}

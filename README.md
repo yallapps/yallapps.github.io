@@ -1,2 +1,5 @@
 # yallapps.github.io
-Site YallApps — toutes nos applications
+
+Source of the YallApps website: https://yallapps.github.io
+
+Free mobile apps — simple, private, offline-first.

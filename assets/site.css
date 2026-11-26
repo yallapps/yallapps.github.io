@@ -1389,3 +1389,14 @@ a.poster:hover > img {
   --accent: #d9bd82;
   --tint: rgba(54, 184, 135, 0.14);
 }
+
+[data-app='nexnum'] {
+  --bg: #050814;
+  --bg-2: #0a1028;
+  --brand: #22d3ee;
+  --brand-hi: #67e8f9;
+  --brand-ink: #04121a;
+  --brand-glow: rgba(34, 211, 238, 0.35);
+  --accent: #a78bfa;
+  --tint: rgba(34, 211, 238, 0.12);
+}

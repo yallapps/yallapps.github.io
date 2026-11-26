@@ -2,26 +2,26 @@
   "app": "athkar360",
   "name": "Athkar 360",
   "channel": "beta",
-  "version": "1.0.0-rc4",
-  "versionCode": 1000004,
+  "version": "1.0.0-rc5",
+  "versionCode": 1000005,
   "minSupportedVersionCode": 0,
-  "published": "2026-11-26T00:06:33.421Z",
-  "releaseUrl": "https://github.com/yallapps/athkar360-releases/releases/tag/v1.0.0-rc4",
+  "published": "2026-11-26T02:46:12.482Z",
+  "releaseUrl": "https://github.com/yallapps/athkar360-releases/releases/tag/v1.0.0-rc5",
   "assets": {
     "arm64-v8a": {
-      "name": "athkar360-1.0.0-rc4-arm64-v8a.apk",
-      "url": "https://github.com/yallapps/athkar360-releases/releases/download/v1.0.0-rc4/athkar360-1.0.0-rc4-arm64-v8a.apk",
-      "sha256": "bade77097cc37f12528eb25602ba44af88018638da5d8956e48080ab058d27f3"
+      "name": "athkar360-1.0.0-rc5-arm64-v8a.apk",
+      "url": "https://github.com/yallapps/athkar360-releases/releases/download/v1.0.0-rc5/athkar360-1.0.0-rc5-arm64-v8a.apk",
+      "sha256": "0078714bc90058324e46d3cde2a5ba75ef6060ae04865e0542e888475d05cb45"
     },
     "armeabi-v7a": {
-      "name": "athkar360-1.0.0-rc4-armeabi-v7a.apk",
-      "url": "https://github.com/yallapps/athkar360-releases/releases/download/v1.0.0-rc4/athkar360-1.0.0-rc4-armeabi-v7a.apk",
-      "sha256": "ed5d0a71f8a04750a3caf9be6a0d37f14f46a5e2f3e432f6e646d841d3f5af33"
+      "name": "athkar360-1.0.0-rc5-armeabi-v7a.apk",
+      "url": "https://github.com/yallapps/athkar360-releases/releases/download/v1.0.0-rc5/athkar360-1.0.0-rc5-armeabi-v7a.apk",
+      "sha256": "2b424c9c9646bc3d937e4147ec3b553a185149675141c3038dae59e352e1ff87"
     },
     "universal": {
-      "name": "athkar360-1.0.0-rc4-universal.apk",
-      "url": "https://github.com/yallapps/athkar360-releases/releases/download/v1.0.0-rc4/athkar360-1.0.0-rc4-universal.apk",
-      "sha256": "c6254c3b40a038d00fc39ae315aaad543aa48096bf4b49f74c542768335cac3e"
+      "name": "athkar360-1.0.0-rc5-universal.apk",
+      "url": "https://github.com/yallapps/athkar360-releases/releases/download/v1.0.0-rc5/athkar360-1.0.0-rc5-universal.apk",
+      "sha256": "e9c4f468e2d364150af7db41a30d8ee837aa215cbd2b984126b439407bdc7318"
     }
   },
   "notes": "First public release.\n\n- Morning and evening adhkar, after prayer, before sleep, upon waking and while travelling.\n- Interactive counter and tasbih.\n- Favorites and offline search.\n- Local reminders.\n- Arabic, French and English interface.\n- Automatic updates on Android: a daily check you can turn off, with checksum verification.\n- Works offline: no account, no analytics. The only network request is the optional update check."

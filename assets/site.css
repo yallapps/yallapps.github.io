@@ -1131,7 +1131,7 @@ a.poster:hover > img {
   border: 1px solid color-mix(in srgb, var(--accent) 35%, var(--line));
 }
 
-.notice svg {
+.notice > svg {
   width: 24px;
   height: 24px;
   color: var(--accent);
@@ -1139,7 +1139,7 @@ a.poster:hover > img {
   margin-top: 1px;
 }
 
-.notice strong {
+.notice > div > strong {
   display: block;
   margin-bottom: 4px;
 }
@@ -1147,6 +1147,14 @@ a.poster:hover > img {
 .notice p {
   color: var(--text-2);
   font-size: 15px;
+}
+
+.notice p + p {
+  margin-top: 10px;
+}
+
+.notice .ctas {
+  margin-top: 18px;
 }
 
 .muted-link {

@@ -21,30 +21,37 @@
   src: url('fonts/inter.woff2') format('woff2');
 }
 
-/* YallApps — shared styles. Light and dark themes follow the system, with a manual override (data-theme). */
+/* YallApps — shared styles.
+   Two levels of identity:
+   - the studio (night blue + yellow accent): home, header, footer, legal pages;
+   - each app (data-app on <body> or on a card): its own palette and hero pattern, see "App themes" at the end.
+   Light and dark themes follow the system, with a manual override (data-theme). */
 
 :root {
-  --bg: #f7f8f4;
-  --bg-alt: #eef1eb;
+  --bg: #f6f7fb;
+  --bg-alt: #eceff7;
   --surface: #ffffff;
-  --surface-2: #f2f5f0;
-  --text: #17221d;
-  --text-2: #4c5a52;
-  --text-3: #75837a;
-  --line: #e2e7e0;
-  --line-strong: #cbd3ca;
-  --brand: #087f5b;
-  --brand-deep: #075b45;
+  --surface-2: #f1f3f9;
+  --text: #0e1530;
+  --text-2: #4a5272;
+  --text-3: #737b98;
+  --line: #e1e5f0;
+  --line-strong: #c7cde0;
+  --brand: #1d2b64;
+  --brand-deep: #111a44;
   --brand-ink: #ffffff;
-  --brand-soft: #e3f1ea;
-  --gold: #9a7a3a;
-  --gold-deco: #c8a96a;
-  --hero: #06493a;
-  --hero-2: #0a6b51;
-  --hero-text: #f7f8f4;
-  --hero-text-2: #c6dccf;
-  --shadow: 0 1px 2px rgba(16, 32, 24, 0.06), 0 8px 24px rgba(16, 32, 24, 0.08);
-  --shadow-lg: 0 2px 6px rgba(16, 32, 24, 0.08), 0 24px 60px rgba(16, 32, 24, 0.16);
+  --brand-soft: #e6eafb;
+  --accent: #8a6400;
+  --accent-deco: #f5c518;
+  --hero: #0a1130;
+  --hero-2: #1b2a6b;
+  --hero-text: #f6f7fb;
+  --hero-text-2: #b8c1e6;
+  --hero-pattern: url('/assets/img/dot-grid.svg');
+  --pattern-size: 28px;
+  --pattern-opacity: 0.16;
+  --shadow: 0 1px 2px rgba(14, 21, 48, 0.06), 0 8px 24px rgba(14, 21, 48, 0.08);
+  --shadow-lg: 0 2px 6px rgba(14, 21, 48, 0.08), 0 24px 60px rgba(14, 21, 48, 0.16);
   --radius: 20px;
   --radius-sm: 12px;
   --max: 1160px;
@@ -57,53 +64,53 @@
 
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme='light']) {
-    --bg: #0b130f;
-    --bg-alt: #0f1914;
-    --surface: #131f19;
-    --surface-2: #182720;
-    --text: #eef3ef;
-    --text-2: #a9b8ae;
-    --text-3: #83938a;
-    --line: #22312a;
-    --line-strong: #33463b;
-    --brand: #36b887;
-    --brand-deep: #1e7a58;
-    --brand-ink: #06120d;
-    --brand-soft: #16302a;
-    --gold: #d9bd82;
-    --gold-deco: #c8a96a;
-    --hero: #0a2219;
-    --hero-2: #0f3527;
-    --hero-text: #eef3ef;
-    --hero-text-2: #a6c4b5;
-    --shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 8px 24px rgba(0, 0, 0, 0.35);
-    --shadow-lg: 0 2px 6px rgba(0, 0, 0, 0.35), 0 24px 60px rgba(0, 0, 0, 0.5);
+    --bg: #070b1c;
+    --bg-alt: #0b1126;
+    --surface: #10183a;
+    --surface-2: #151f47;
+    --text: #eef1fb;
+    --text-2: #aab2d3;
+    --text-3: #7f88ad;
+    --line: #1f2a55;
+    --line-strong: #2e3b70;
+    --brand: #f5c518;
+    --brand-deep: #d4a90c;
+    --brand-ink: #0b1130;
+    --brand-soft: #2a2919;
+    --accent: #f5c518;
+    --accent-deco: #f5c518;
+    --hero: #060a1c;
+    --hero-2: #131e52;
+    --hero-text: #eef1fb;
+    --hero-text-2: #a9b3dc;
+    --shadow: 0 1px 2px rgba(0, 0, 0, 0.35), 0 8px 24px rgba(0, 0, 0, 0.4);
+    --shadow-lg: 0 2px 6px rgba(0, 0, 0, 0.4), 0 24px 60px rgba(0, 0, 0, 0.55);
     color-scheme: dark;
   }
 }
 
 :root[data-theme='dark'] {
-  --bg: #0b130f;
-  --bg-alt: #0f1914;
-  --surface: #131f19;
-  --surface-2: #182720;
-  --text: #eef3ef;
-  --text-2: #a9b8ae;
-  --text-3: #83938a;
-  --line: #22312a;
-  --line-strong: #33463b;
-  --brand: #36b887;
-  --brand-deep: #1e7a58;
-  --brand-ink: #06120d;
-  --brand-soft: #16302a;
-  --gold: #d9bd82;
-  --gold-deco: #c8a96a;
-  --hero: #0a2219;
-  --hero-2: #0f3527;
-  --hero-text: #eef3ef;
-  --hero-text-2: #a6c4b5;
-  --shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 8px 24px rgba(0, 0, 0, 0.35);
-  --shadow-lg: 0 2px 6px rgba(0, 0, 0, 0.35), 0 24px 60px rgba(0, 0, 0, 0.5);
+  --bg: #070b1c;
+  --bg-alt: #0b1126;
+  --surface: #10183a;
+  --surface-2: #151f47;
+  --text: #eef1fb;
+  --text-2: #aab2d3;
+  --text-3: #7f88ad;
+  --line: #1f2a55;
+  --line-strong: #2e3b70;
+  --brand: #f5c518;
+  --brand-deep: #d4a90c;
+  --brand-ink: #0b1130;
+  --brand-soft: #2a2919;
+  --accent: #f5c518;
+  --accent-deco: #f5c518;
+  --hero: #060a1c;
+  --hero-2: #131e52;
+  --hero-text: #eef1fb;
+  --hero-text-2: #a9b3dc;
+  --shadow: 0 1px 2px rgba(0, 0, 0, 0.35), 0 8px 24px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 2px 6px rgba(0, 0, 0, 0.4), 0 24px 60px rgba(0, 0, 0, 0.55);
   color-scheme: dark;
 }
 
@@ -204,7 +211,7 @@ p {
   font-weight: 600;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: var(--gold);
+  color: var(--accent);
 }
 
 .eyebrow::before {
@@ -356,7 +363,17 @@ p {
 
 .btn-light {
   background: var(--hero-text);
-  color: #06372b;
+  color: var(--hero);
+}
+
+.btn-accent {
+  background: var(--accent-deco);
+  color: #0b1130;
+  box-shadow: 0 8px 24px color-mix(in srgb, var(--accent-deco) 35%, transparent);
+}
+
+.btn-accent:hover {
+  box-shadow: 0 12px 30px color-mix(in srgb, var(--accent-deco) 45%, transparent);
 }
 
 .btn-ghost {
@@ -391,7 +408,7 @@ p {
   overflow: hidden;
   color: var(--hero-text);
   background:
-    radial-gradient(1200px 600px at 85% -10%, color-mix(in srgb, var(--gold-deco) 22%, transparent), transparent 60%),
+    radial-gradient(1200px 600px at 85% -10%, color-mix(in srgb, var(--accent-deco) 12%, transparent), transparent 55%),
     radial-gradient(900px 500px at -10% 110%, color-mix(in srgb, var(--hero-2) 90%, transparent), transparent 60%),
     linear-gradient(160deg, var(--hero-2), var(--hero) 55%);
 }
@@ -400,9 +417,9 @@ p {
   content: '';
   position: absolute;
   inset: 0;
-  background-image: url('img/star-pattern.svg');
-  background-size: 120px;
-  opacity: 0.09;
+  background-image: var(--hero-pattern);
+  background-size: var(--pattern-size);
+  opacity: var(--pattern-opacity);
   mask-image: linear-gradient(to bottom, #000 30%, transparent 95%);
   -webkit-mask-image: linear-gradient(to bottom, #000 30%, transparent 95%);
   pointer-events: none;
@@ -420,7 +437,7 @@ p {
 
 .hero h1 em {
   font-style: italic;
-  color: var(--gold-deco);
+  color: var(--accent-deco);
   font-weight: 400;
 }
 
@@ -429,7 +446,7 @@ p {
 }
 
 .hero .eyebrow {
-  color: var(--gold-deco);
+  color: var(--accent-deco);
 }
 
 .home-hero {
@@ -692,8 +709,8 @@ a.app-card:hover .go {
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background: var(--gold-deco);
-  box-shadow: 0 0 0 4px color-mix(in srgb, var(--gold-deco) 25%, transparent);
+  background: var(--accent-deco);
+  box-shadow: 0 0 0 4px color-mix(in srgb, var(--accent-deco) 25%, transparent);
 }
 
 .status-dot.live {
@@ -780,8 +797,8 @@ a.app-card:hover .go {
   border-radius: 12px;
   display: grid;
   place-items: center;
-  background: color-mix(in srgb, var(--gold-deco) 18%, transparent);
-  color: var(--gold);
+  background: color-mix(in srgb, var(--accent-deco) 18%, transparent);
+  color: var(--accent);
 }
 
 .feature .icon svg {
@@ -955,15 +972,15 @@ a.app-card:hover .go {
   align-items: flex-start;
   padding: 20px 22px;
   border-radius: var(--radius-sm);
-  background: color-mix(in srgb, var(--gold-deco) 12%, var(--surface));
-  border: 1px solid color-mix(in srgb, var(--gold-deco) 35%, var(--line));
+  background: color-mix(in srgb, var(--accent-deco) 12%, var(--surface));
+  border: 1px solid color-mix(in srgb, var(--accent-deco) 35%, var(--line));
   color: var(--text);
 }
 
 .notice svg {
   width: 22px;
   height: 22px;
-  color: var(--gold);
+  color: var(--accent);
   flex: none;
   margin-top: 2px;
 }
@@ -1202,4 +1219,69 @@ a.app-card:hover .go {
 }
 :root[data-theme='dark'] .only-dark {
   display: block !important;
+}
+
+/* ---------- App themes ----------
+   Each app page sets <body data-app="<id>">; catalogue cards set data-app too.
+   To add an app: copy a block below, change the palette and the hero pattern. */
+
+[data-app='athkar360'] {
+  --bg: #f7f8f4;
+  --bg-alt: #eef1eb;
+  --surface: #ffffff;
+  --surface-2: #f2f5f0;
+  --text: #17221d;
+  --text-2: #4c5a52;
+  --text-3: #75837a;
+  --line: #e2e7e0;
+  --line-strong: #cbd3ca;
+  --brand: #087f5b;
+  --brand-deep: #075b45;
+  --brand-ink: #ffffff;
+  --brand-soft: #e3f1ea;
+  --accent: #9a7a3a;
+  --accent-deco: #c8a96a;
+  --hero: #06493a;
+  --hero-2: #0a6b51;
+  --hero-text: #f7f8f4;
+  --hero-text-2: #c6dccf;
+  --hero-pattern: url('/assets/img/star-pattern.svg');
+  --pattern-size: 120px;
+  --pattern-opacity: 0.09;
+  --shadow: 0 1px 2px rgba(16, 32, 24, 0.06), 0 8px 24px rgba(16, 32, 24, 0.08);
+  --shadow-lg: 0 2px 6px rgba(16, 32, 24, 0.08), 0 24px 60px rgba(16, 32, 24, 0.16);
+}
+
+:root[data-theme='dark'] [data-app='athkar360'] {
+  --bg: #0b130f;
+  --bg-alt: #0f1914;
+  --surface: #131f19;
+  --surface-2: #182720;
+  --text: #eef3ef;
+  --text-2: #a9b8ae;
+  --text-3: #83938a;
+  --line: #22312a;
+  --line-strong: #33463b;
+  --brand: #36b887;
+  --brand-deep: #1e7a58;
+  --brand-ink: #06120d;
+  --brand-soft: #16302a;
+  --accent: #d9bd82;
+  --accent-deco: #c8a96a;
+  --hero: #0a2219;
+  --hero-2: #0f3527;
+  --hero-text: #eef3ef;
+  --hero-text-2: #a6c4b5;
+  --shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 8px 24px rgba(0, 0, 0, 0.35);
+  --shadow-lg: 0 2px 6px rgba(0, 0, 0, 0.35), 0 24px 60px rgba(0, 0, 0, 0.5);
+}
+
+/* Catalogue card: a thin band in the app's colours. */
+.app-card[data-app]::before {
+  content: '';
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 4px;
+  border-radius: var(--radius) var(--radius) 0 0;
+  background: linear-gradient(90deg, var(--hero-2), var(--accent-deco));
 }

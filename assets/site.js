@@ -1,33 +1,25 @@
-// YallApps — theme toggle, reveal-on-scroll and live release data (read from <app>/latest.json).
+// YallApps — glass header on scroll, pointer glow on cards, reveal-on-scroll and live release data (<app>/latest.json).
 (function () {
   var root = document.documentElement;
   root.classList.remove('no-js');
 
-  // Theme: system by default; the toggle stores an explicit choice.
-  var KEY = 'yallapps.theme';
-  function systemDark() {
-    return window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-  }
-  function apply(theme) {
-    root.setAttribute('data-theme', theme);
-  }
-  var saved = null;
-  try {
-    saved = localStorage.getItem(KEY);
-  } catch (e) {}
-  apply(saved === 'light' || saved === 'dark' ? saved : systemDark() ? 'dark' : 'light');
-
   document.addEventListener('DOMContentLoaded', function () {
-    var toggle = document.querySelector('.theme-toggle');
-    if (toggle) {
-      toggle.addEventListener('click', function () {
-        var next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
-        apply(next);
-        try {
-          localStorage.setItem(KEY, next);
-        } catch (e) {}
-      });
+    // Header becomes glass once the page is scrolled.
+    var header = document.querySelector('.site-header');
+    function onScroll() {
+      if (header) header.classList.toggle('scrolled', window.scrollY > 24);
     }
+    onScroll();
+    window.addEventListener('scroll', onScroll, { passive: true });
+
+    // Cards: glow follows the pointer.
+    document.querySelectorAll('.card').forEach(function (card) {
+      card.addEventListener('pointermove', function (e) {
+        var r = card.getBoundingClientRect();
+        card.style.setProperty('--mx', e.clientX - r.left + 'px');
+        card.style.setProperty('--my', e.clientY - r.top + 'px');
+      });
+    });
 
     // Reveal sections as they enter the viewport.
     var items = document.querySelectorAll('.reveal');
@@ -66,6 +58,10 @@
     return d.toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' });
   }
 
+  function setAll(selector, fn) {
+    document.querySelectorAll(selector).forEach(fn);
+  }
+
   function loadRelease() {
     var host = document.querySelector('[data-release]');
     if (!host) return;
@@ -83,10 +79,6 @@
       .catch(function () {
         showComingSoon();
       });
-  }
-
-  function setAll(selector, fn) {
-    document.querySelectorAll(selector).forEach(fn);
   }
 
   function showRelease(m) {
@@ -109,8 +101,8 @@
       if (a) {
         el.setAttribute('href', a.url);
         el.removeAttribute('aria-disabled');
-      } else {
-        el.closest('.file') && (el.closest('.file').hidden = true);
+      } else if (el.closest('.file')) {
+        el.closest('.file').hidden = true;
       }
     });
     setAll('[data-sha]', function (el) {

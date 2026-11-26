@@ -10,6 +10,13 @@ Static site (HTML, CSS, a little JavaScript), no build step. Fonts are self-host
 - `nexnum/` — NexNum page, privacy policy and screenshots (release files written by the NexNum workflow)
 - `assets/` — shared styles, script, fonts and images
 
+## Languages
+
+English at the root, French under `fr/`, Arabic (RTL) under `ar/`, for the home page and the Athkar 360 pages.
+Each page lists its translations with `<link rel="alternate" hreflang>` and has a language switch in the header.
+When you change an English page, update its `fr/` and `ar/` copies too. Arabic text uses IBM Plex Sans Arabic
+(`assets/fonts/plex-arabic-*.woff2`, OFL); use logical CSS properties (`margin-inline-start`…) so layouts mirror in RTL.
+
 ## Identity
 
 Dark-only, cinematic design. Fonts (Sora, Inter) are self-hosted.

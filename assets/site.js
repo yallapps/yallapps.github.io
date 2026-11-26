@@ -52,10 +52,17 @@
   });
 
   // ---- Release data ----
+  var lang = (root.getAttribute('lang') || 'en').slice(0, 2);
+  var T = {
+    en: { locale: 'en-GB', version: 'Version ', released: 'Released ' },
+    fr: { locale: 'fr-FR', version: 'Version ', released: 'Publiée le ' },
+    ar: { locale: 'ar', version: 'الإصدار ', released: 'نُشر في ' }
+  }[lang] || { locale: 'en-GB', version: 'Version ', released: 'Released ' };
+
   function formatDate(iso) {
     var d = new Date(iso);
     if (isNaN(d.getTime())) return '';
-    return d.toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' });
+    return d.toLocaleDateString(T.locale, { day: 'numeric', month: 'long', year: 'numeric' });
   }
 
   function setAll(selector, fn) {
@@ -90,11 +97,11 @@
       el.hidden = true;
     });
     setAll('[data-version]', function (el) {
-      el.textContent = 'Version ' + m.version;
+      el.textContent = T.version + m.version;
     });
     setAll('[data-published]', function (el) {
       var t = formatDate(m.published);
-      el.textContent = t ? 'Released ' + t : '';
+      el.textContent = t ? T.released + t : '';
     });
     setAll('[data-asset]', function (el) {
       var a = m.assets[el.getAttribute('data-asset')];

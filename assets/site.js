@@ -44,6 +44,22 @@
       });
     }
 
+    // Catalogue: category filters (nothing is stored).
+    document.querySelectorAll('.cat-filter').forEach(function (bar) {
+      var cards = document.querySelectorAll('.catalog [data-cat]');
+      bar.addEventListener('click', function (e) {
+        var btn = e.target.closest('.cat-btn');
+        if (!btn) return;
+        var f = btn.getAttribute('data-filter');
+        bar.querySelectorAll('.cat-btn').forEach(function (b) {
+          b.setAttribute('aria-pressed', String(b === btn));
+        });
+        cards.forEach(function (c) {
+          c.hidden = f !== 'all' && c.getAttribute('data-cat') !== f;
+        });
+      });
+    });
+
     document.querySelectorAll('[data-year]').forEach(function (el) {
       el.textContent = String(new Date().getFullYear());
     });

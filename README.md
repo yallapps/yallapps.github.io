@@ -30,6 +30,8 @@ Dark-only, cinematic design. Fonts (Sora, Inter) are self-hosted.
 1. Add a theme block `[data-app='<id>']` at the end of `assets/site.css` (background tint, brand colours, accent).
 2. Copy `athkar360/` to `<id>/`: replace texts, screenshots (`img/`, English UI, 390×844 at 2x, WebP — dark screenshots look best),
    icon and privacy policy.
-3. On the home page, add a poster in "All apps" (`data-app="<id>"`), and optionally make it the "Featured" spotlight.
+3. Add or update the app in `APPS` in `tools/catalog.js` (category, tagline in EN/FR/AR, `live: true` once published),
+   then run `node tools/catalog.js`: it rebuilds the "All apps" catalogue and category filters on the three home pages.
+   Optionally make the app the "Featured" spotlight.
    Add the pages to `sitemap.xml`.
 4. The app's release workflow writes `<id>/latest.json`, `beta.json` and the `android*/` download links.

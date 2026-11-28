@@ -2,27 +2,27 @@
   "app": "nexnum",
   "name": "NexNum",
   "channel": "beta",
-  "version": "1.0.0-rc1",
-  "versionCode": 1000001,
+  "version": "1.0.0-rc2",
+  "versionCode": 1000002,
   "minSupportedVersionCode": 0,
-  "published": "2026-11-27T23:01:15.963Z",
-  "releaseUrl": "https://github.com/yallapps/nexnum-releases/releases/tag/v1.0.0-rc1",
+  "published": "2026-11-28T05:30:58.292Z",
+  "releaseUrl": "https://github.com/yallapps/nexnum-releases/releases/tag/v1.0.0-rc2",
   "assets": {
     "arm64-v8a": {
-      "name": "nexnum-1.0.0-rc1-arm64-v8a.apk",
-      "url": "https://github.com/yallapps/nexnum-releases/releases/download/v1.0.0-rc1/nexnum-1.0.0-rc1-arm64-v8a.apk",
-      "sha256": "6d2e03732f1a1d0e76cbe442b30e62ca7ab15c06af68b2dc2a83c40fc0159054"
+      "name": "nexnum-1.0.0-rc2-arm64-v8a.apk",
+      "url": "https://github.com/yallapps/nexnum-releases/releases/download/v1.0.0-rc2/nexnum-1.0.0-rc2-arm64-v8a.apk",
+      "sha256": "8835c11d7c2a4c902b67f0de30ff4ecb7f5992a68a39f91b9cca8fe096e2f991"
     },
     "armeabi-v7a": {
-      "name": "nexnum-1.0.0-rc1-armeabi-v7a.apk",
-      "url": "https://github.com/yallapps/nexnum-releases/releases/download/v1.0.0-rc1/nexnum-1.0.0-rc1-armeabi-v7a.apk",
-      "sha256": "6cedee703ee28ec88cc1ecdc8ec1c80bd4579a21f0c65a9b17026e2392d4ce6a"
+      "name": "nexnum-1.0.0-rc2-armeabi-v7a.apk",
+      "url": "https://github.com/yallapps/nexnum-releases/releases/download/v1.0.0-rc2/nexnum-1.0.0-rc2-armeabi-v7a.apk",
+      "sha256": "8a9a4f3db633bdf19da8b35fc1ca3b32e78dce44a276df12530d28f86810d0eb"
     },
     "universal": {
-      "name": "nexnum-1.0.0-rc1-universal.apk",
-      "url": "https://github.com/yallapps/nexnum-releases/releases/download/v1.0.0-rc1/nexnum-1.0.0-rc1-universal.apk",
-      "sha256": "3a48f6d459206f9b789e3d39d2c8a4332327d9677bfcdfb62d8aa3e2e74c0142"
+      "name": "nexnum-1.0.0-rc2-universal.apk",
+      "url": "https://github.com/yallapps/nexnum-releases/releases/download/v1.0.0-rc2/nexnum-1.0.0-rc2-universal.apk",
+      "sha256": "04a9b24c931013d141ce8fa9c6e6bf003524fc94feba5c46b9f3b7b793b27a5a"
     }
   },
-  "notes": "First public release.\n\n- Higher or Lower on numbers from 1 to 100: the bolder the call, the bigger the points, with a streak multiplier up to ×4.\n- Daily Challenge: the same 20 rounds for every player, a shareable result grid and a new challenge at midnight.\n- Three daily missions, XP and levels up to 50, a day streak with shields, and 16 badges.\n- Five themes to unlock, personal records and detailed statistics.\n- Sound, haptics and reduced motion settings.\n- Automatic updates on Android: a daily check you can turn off, with checksum verification.\n- Works offline: no account, no ads, no analytics. The only network request is the optional update check."
+  "notes": "First public release.\n\n- Number duel against the CPU: you each hide a number from 1 to 100, then take turns guessing with higher/lower hints. First to find the other's number wins.\n- Three CPU levels: Easy, Normal and Hard. Harder wins and fewer guesses score more.\n- Daily Challenge: one secret number for every player, a 7-guess objective, a shareable arrow card and a new number at midnight.\n- Three daily missions, XP and levels up to 50, a day streak with shields, and 18 badges.\n- Five themes to unlock, personal records and detailed statistics.\n- Sound, haptics and reduced motion settings.\n- Automatic updates on Android: a daily check you can turn off, with checksum verification.\n- Works offline: no account, no ads, no analytics. The only network request is the optional update check."
 }

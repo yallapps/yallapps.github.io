@@ -25,7 +25,7 @@ const APPS = [
     tag: { en: 'Daily remembrances, offline.', fr: 'Les adhkar du quotidien, hors ligne.', ar: 'أذكار يومية، دون اتصال.' } },
   { id: 'nexnum', name: 'NexNum', cat: 'games', live: true, page: '/nexnum/', localized: false,
     shot: '/nexnum/img/play.webp', icon: '/nexnum/img/icon-256.webp',
-    tag: { en: 'Higher or lower, played bold.', fr: 'Plus ou moins, en version audacieuse.', ar: 'أعلى أم أدنى، بجرأة.' } },
+    tag: { en: 'The number duel: find theirs first.', fr: 'Le duel de nombres : trouvez le sien en premier.', ar: 'مبارزة الأرقام: اكتشف رقم خصمك أولًا.' } },
   { id: 'powerbat360', name: 'PowerBat360', cat: 'tools', live: true, page: '/powerbat360/', localized: false,
     shot: '/powerbat360/img/poster.webp', icon: '/powerbat360/img/icon-256.webp',
     tag: { en: 'Your battery coach for Windows.', fr: 'Votre coach batterie pour Windows.', ar: 'مدرب بطاريتك على Windows.' } },

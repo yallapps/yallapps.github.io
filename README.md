@@ -8,6 +8,7 @@ Static site (HTML, CSS, a little JavaScript), no build step. Fonts are self-host
 - `athkar360/` — Athkar 360 page, privacy policy and screenshots
 - `athkar360/latest.json`, `beta.json`, `android*/` — written by the Athkar 360 release workflow; do not edit by hand
 - `nexnum/` — NexNum page, privacy policy and screenshots (release files written by the NexNum workflow)
+- `powerbat360/` — PowerBat360 page (Windows app), privacy policy and screenshots; `beta.json` lists the current preview build
 - `assets/` — shared styles, script, fonts and images
 
 ## Languages

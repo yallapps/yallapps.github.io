@@ -1,0 +1,23 @@
+{
+    "app":  "powerbat360",
+    "name":  "PowerBat360",
+    "channel":  "beta",
+    "version":  "0.3.0",
+    "versionCode":  3000,
+    "minSupportedVersionCode":  0,
+    "published":  "2026-11-28T12:58:16.000Z",
+    "releaseUrl":  "https://github.com/yallapps/powerbat360-releases/releases/tag/v0.3.0",
+    "assets":  {
+                   "win-x64":  {
+                                   "name":  "powerbat360-0.3.0-win-x64.exe",
+                                   "url":  "https://github.com/yallapps/powerbat360-releases/releases/download/v0.3.0/powerbat360-0.3.0-win-x64.exe",
+                                   "sha256":  "3568333ffd4b7e1ffd1c042a8f21cb5c178b3c229d0ab4dd56dd74e0b7976dd9"
+                               },
+                   "win-arm64":  {
+                                     "name":  "powerbat360-0.3.0-win-arm64.exe",
+                                     "url":  "https://github.com/yallapps/powerbat360-releases/releases/download/v0.3.0/powerbat360-0.3.0-win-arm64.exe",
+                                     "sha256":  "76acc884964be9e3db2889d147675a20dcd13441563ed8ddfbca7d769deb2ed1"
+                                 }
+               },
+    "notes":  "First public preview. Interface in French.\n\n- Dashboard with a battery score out of 100, live power draw and estimated time left.\n- Time-left estimate per running app, with a \"what if I close…\" simulator.\n- Optimize page: 17 checks (power mode, screen, sleep, startup apps…) you can fix in one click and undo.\n- Battery page: health, wear and capacity history from Windows battery reports.\n- History: a day-by-day usage journal with the apps that used the most energy.\n- Automation: plugged/unplugged rules (60 Hz, brightness, power-hungry app alerts), low battery alert and an \"unplug me\" reminder.\n- Charge limit detection for Lenovo ThinkPad, with guidance for other brands.\n- Works on desktops without a battery too.\n- Works offline: no account, no analytics, no network requests. Data stays on your PC."
+}
